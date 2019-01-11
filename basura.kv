@@ -1,0 +1,24 @@
+Reporter:
+
+
+<Reporter>:
+    canvas.before:
+        Color:
+            rgb: [1, 1, 1, 1]
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    size_hint: None, None
+    width: "400dp"
+    height: self.width
+    pos_hint:
+        {
+        "center_x": 0.5,
+        "center_y": 0.5
+        }
+    Button:
+        text: "Reporter"
+        font_size: 40
+        on_press: root.start_reporter()
+
+
