@@ -9,6 +9,7 @@ documentation for Basura App: https://goo.gl/TZijCa
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 import subprocess
+import os
 
 
 """ Call the reporter bash script """
@@ -17,7 +18,8 @@ class  Reporter(BoxLayout):
     """reporter bash script called when button is pressed"""
     def start_reporter(self):
         print("starting reporter bash script")
-        subprocess.call("/home/happycarmi/FSE/basura/basura-app/reporter.sh")
+        rep_dir = os.getcwd()
+        subprocess.call( rep_dir+'/reporter.sh')
 
 
 class BasuraApp(App):
